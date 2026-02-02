@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newsletter | CIEL Professionals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>MIMI@cielprof.com</span>
+      <span>+234 813 347 4986</span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="CIEL Professionals Home">
+        <img src="Logo.jpg" alt="CIEL Professionals Logo" class="logo__img" />
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        ☰
+      </button>
+
+      <!-- Nav -->
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="course-videos.html">Course Videos</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="upcoming-classes.html">Upcoming Classes</a>
+        <a href="news-letter.html" class="is-active-link">Newsletter</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="link" href="login.html">Login</a>
+        <a class="btn btn--small" href="register.html">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="cp-section cp-section--soft">
+    <div class="cp-container">
+      <div class="cp-head">
+        <p class="cp-kicker">Updates</p>
+        <h1 class="cp-title">Newsletter</h1>
+        <p class="muted">
+          Get course updates, free templates, career tips, and upcoming cohort announcements.
+        </p>
+      </div>
+
+      <!-- Subscribe Card -->
+      <div class="nl-subscribe">
+        <div class="nl-subscribe__left">
+          <h2 class="nl-subscribe__title">Subscribe to CIEL Updates</h2>
+          <p class="muted">
+            We send 1–2 emails per month. No spam. Unsubscribe anytime.
+          </p>
+
+          <!-- Replace action with your Formspree or backend endpoint -->
+          <form class="nl-form" id="newsletterForm" action="#" method="post">
+            <div class="nl-form__row">
+              <input class="input" type="text" name="name" placeholder="Full Name" required />
+              <input class="input" type="email" name="email" placeholder="Email Address" required />
+            </div>
+
+            <div class="nl-form__row">
+              <select class="input" name="interest">
+                <option value="">Interest (optional)</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Business Analysis">Business Analysis</option>
+                <option value="Data & Analytics">Data & Analytics</option>
+                <option value="Technology">Technology</option>
+                <option value="Cyber & IT">Cyber & IT</option>
+                <option value="HSE">HSE</option>
+              </select>
+
+              <button class="btn" type="submit">Subscribe</button>
+            </div>
+
+            <p class="nl-note muted" id="newsletterMsg" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="nl-subscribe__right">
+          <div class="nl-box">
+            <h3>What you’ll get</h3>
+            <ul>
+              <li>✅ Upcoming class dates</li>
+              <li>✅ Free templates & tools</li>
+              <li>✅ Study tips & mock questions</li>
+              <li>✅ Career & interview support</li>
+            </ul>
+          </div>
+
+          <div class="nl-box">
+            <h3>Contact</h3>
+            <p class="muted" style="margin:0">Email: MIMI@cielprof.com</p>
+            <p class="muted" style="margin:0">Phone: +234 813 347 4986</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recent Posts -->
+  <section class="cp-section">
+    <div class="cp-container">
+
+      <div class="cp-head cp-head--row">
+        <div>
+          <p class="cp-kicker">Latest</p>
+          <h2 class="cp-title">Recent Updates</h2>
+        </div>
+        <a class="cp-cta" href="upcoming-classes.html">View Upcoming Classes</a>
+      </div>
+
+      <div class="cp-grid cp-grid--3">
+
+        <article class="nl-post">
+          <h3 class="nl-post__title">Free PMP Study Plan (4-Week Structure)</h3>
+          <p class="nl-post__meta">Category: Project Management • Posted: 2026</p>
+          <p class="nl-post__text">
+            A simple weekly plan you can follow to cover all PMP domains with mock tests and revision.
+          </p>
+          <a class="nl-post__link" href="courses.html#pm">Read more</a>
+        </article>
+
+        <article class="nl-post">
+          <h3 class="nl-post__title">Power BI Dashboard Checklist (Beginner → Pro)</h3>
+          <p class="nl-post__meta">Category: Data & Analytics • Posted: 2026</p>
+          <p class="nl-post__text">
+            Clean data, model properly, create measures, build visuals, and deliver executive KPIs.
+          </p>
+          <a class="nl-post__link" href="courses.html#data">Read more</a>
+        </article>
+
+        <article class="nl-post">
+          <h3 class="nl-post__title">Primavera P6: 5 Common Mistakes to Avoid</h3>
+          <p class="nl-post__meta">Category: Technology • Posted: 2026</p>
+          <p class="nl-post__text">
+            Avoid logic gaps, bad calendars, missing baselines, and incorrect resource loading.
+          </p>
+          <a class="nl-post__link" href="courses.html#tech">Read more</a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 CIEL Professionals</p>
+    </div>
+  </footer>
+
+  <!-- Page-only styles -->
+  <style>
+    .nl-subscribe{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:start}
+    .nl-subscribe__left,.nl-subscribe__right{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:18px}
+    .nl-subscribe__title{margin-top:0}
+    .nl-form{margin-top:12px;display:grid;gap:10px}
+    .nl-form__row{display:flex;gap:10px;flex-wrap:wrap}
+    .nl-form__row .input{flex:1;min-width:220px}
+    .nl-note{margin:6px 0 0}
+    .nl-box{border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:14px;margin-bottom:12px;background:rgba(0,0,0,.03)}
+    .nl-box ul{margin:10px 0 0;padding-left:18px}
+    .nl-post{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+    .nl-post__title{margin:0}
+    .nl-post__meta{margin:0;color:rgba(0,0,0,.6);font-size:13px}
+    .nl-post__text{margin:0;color:rgba(0,0,0,.75)}
+    .nl-post__link{font-weight:800;text-decoration:none}
+    @media (max-width: 900px){
+      .nl-subscribe{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- Page-only JS (simple success message without backend) -->
+  <script>
+    (function () {
+      const form = document.getElementById("newsletterForm");
+      const msg = document.getElementById("newsletterMsg");
+      if (!form || !msg) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // If you connect Formspree or a backend, remove preventDefault and handle normally.
+        msg.textContent = "✅ Thanks! You’re subscribed. Watch your inbox for updates.";
+        form.reset();
+      });
+    })();
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>

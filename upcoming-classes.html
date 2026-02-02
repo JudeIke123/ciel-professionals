@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Classes | CIEL Professionals</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>MIMI@cielprof.com</span>
+      <span>+234 813 347 4986</span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="CIEL Professionals Home">
+        <img src="Logo.jpg" alt="CIEL Professionals Logo" class="logo__img" />
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        ☰
+      </button>
+
+      <!-- Nav -->
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="course-videos.html">Course Videos</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="upcoming-classes.html" class="is-active-link">Upcoming Classes</a>
+        <a href="news-letter.html">Newsletter</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="link" href="login.html">Login</a>
+        <a class="btn btn--small" href="register.html">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="cp-section cp-section--soft">
+    <div class="cp-container">
+      <div class="cp-head cp-head--row">
+        <div>
+          <p class="cp-kicker">Calendar</p>
+          <h1 class="cp-title">Upcoming Classes</h1>
+          <p class="muted">
+            Explore our next cohorts (classroom + online). Filter by category and register quickly.
+          </p>
+        </div>
+
+        <a class="cp-cta" href="register.html">Register Now</a>
+      </div>
+
+      <!-- Filters -->
+      <div class="uc-filters">
+        <div class="uc-search">
+          <input class="input" id="classSearch" placeholder="Search: PMP, P6, Power BI..." />
+          <button class="btn btn--small" id="classSearchBtn" type="button">Search</button>
+          <button class="btn btn--ghost btn--small" id="classClearBtn" type="button">Clear</button>
+        </div>
+
+        <div class="uc-chips" role="group" aria-label="Filter by category">
+          <button class="chip is-active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="pm">Project Mgmt</button>
+          <button class="chip" type="button" data-filter="ba">Business Analysis</button>
+          <button class="chip" type="button" data-filter="data">Data & Analytics</button>
+          <button class="chip" type="button" data-filter="tech">Technology</button>
+          <button class="chip" type="button" data-filter="hse">HSE</button>
+          <button class="chip" type="button" data-filter="cyber">Cyber & IT</button>
+        </div>
+      </div>
+
+      <!-- Classes Grid -->
+      <div class="cp-grid cp-grid--3" id="classesGrid">
+
+        <!-- Card 1 -->
+        <article class="class-card" data-cat="pm" data-title="Project Management Professional PMP">
+          <div class="class-card__top">
+            <div class="class-pill">Classroom + Online</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">Project Management Professional (PMP)</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 4 Weeks • <span>Mode:</span> Hybrid
+          </p>
+
+          <ul class="class-card__list">
+            <li>Exam-focused coaching + templates</li>
+            <li>Schedule, cost, risk & stakeholder mastery</li>
+            <li>Mock tests + mentoring support</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#pm">View Details</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="class-card" data-cat="pm" data-title="Primavera P6 Planning Scheduling">
+          <div class="class-card__top">
+            <div class="class-pill">Classroom</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">Primavera P6 (Planning & Scheduling)</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 2 Weeks • <span>Mode:</span> Classroom
+          </p>
+
+          <ul class="class-card__list">
+            <li>WBS, activities, logic, baselines</li>
+            <li>Resources, cost loading & reports</li>
+            <li>Hands-on real project schedule</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#tech">View Details</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="class-card" data-cat="data" data-title="Power BI Data Analytics Dashboard">
+          <div class="class-card__top">
+            <div class="class-pill">Online</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">Power BI (Data Analytics & Dashboards)</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 3 Weeks • <span>Mode:</span> Online
+          </p>
+
+          <ul class="class-card__list">
+            <li>Power Query cleaning + modelling</li>
+            <li>DAX measures + KPI dashboards</li>
+            <li>Real-world projects & portfolio</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#data">View Details</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="class-card" data-cat="ba" data-title="CBAP Business Analysis">
+          <div class="class-card__top">
+            <div class="class-pill">Hybrid</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">CBAP (Business Analysis)</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 4 Weeks • <span>Mode:</span> Hybrid
+          </p>
+
+          <ul class="class-card__list">
+            <li>BABOK knowledge areas + practice</li>
+            <li>Requirements, UML, user stories</li>
+            <li>Mock tests + coaching</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#ba">View Details</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="class-card" data-cat="cyber" data-title="Cyber Security Fundamentals">
+          <div class="class-card__top">
+            <div class="class-pill">Online</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">Cyber Security Fundamentals</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 2 Weeks • <span>Mode:</span> Online
+          </p>
+
+          <ul class="class-card__list">
+            <li>Threats, phishing, malware, controls</li>
+            <li>Practical Windows security checklist</li>
+            <li>Intro to SOC & incident response</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#cyber">View Details</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="class-card" data-cat="hse" data-title="HSE Level 1 2 3">
+          <div class="class-card__top">
+            <div class="class-pill">Classroom</div>
+            <div class="class-status">Open</div>
+          </div>
+
+          <h3 class="class-card__title">HSE (Level 1–2–3)</h3>
+          <p class="class-card__meta">
+            <span>Duration:</span> 1–2 Weeks • <span>Mode:</span> Classroom
+          </p>
+
+          <ul class="class-card__list">
+            <li>Safety fundamentals + site practices</li>
+            <li>Risk assessment & toolbox talk</li>
+            <li>Certificate + practical sessions</li>
+          </ul>
+
+          <div class="class-card__row">
+            <div class="class-card__date">
+              <small>Start Date</small>
+              <strong>TBD</strong>
+            </div>
+            <div class="class-card__date">
+              <small>Time</small>
+              <strong>TBD</strong>
+            </div>
+          </div>
+
+          <div class="class-card__actions">
+            <a class="btn btn--small" href="register.html">Enroll</a>
+            <a class="btn btn--ghost btn--small" href="courses.html#hse">View Details</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Callout -->
+      <div class="uc-callout">
+        <div>
+          <h3>Want your preferred schedule?</h3>
+          <p class="muted">Tell us the course + your available days. We’ll notify you once a cohort opens.</p>
+        </div>
+        <a class="btn btn--ghost" href="contact.html">Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 CIEL Professionals</p>
+    </div>
+  </footer>
+
+  <!-- Page-only styles (optional, safe) -->
+  <style>
+    .uc-filters{display:grid;gap:12px;margin-top:14px}
+    .uc-search{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .uc-chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{border:1px solid rgba(0,0,0,.12);background:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:600}
+    .chip.is-active{border-color:rgba(0,0,0,.25)}
+    .class-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px}
+    .class-card__top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .class-pill{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.05)}
+    .class-status{font-weight:800}
+    .class-card__title{margin:0}
+    .class-card__meta{margin:0;color:rgba(0,0,0,.65)}
+    .class-card__meta span{font-weight:700}
+    .class-card__list{margin:0;padding-left:18px;color:rgba(0,0,0,.75)}
+    .class-card__row{display:flex;gap:14px;flex-wrap:wrap}
+    .class-card__date{flex:1;min-width:130px;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:10px 12px}
+    .class-card__date small{display:block;color:rgba(0,0,0,.55)}
+    .class-card__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .uc-callout{margin-top:18px;background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  </style>
+
+  <!-- Page-only JS (filter/search) -->
+  <script>
+    (function () {
+      const grid = document.getElementById("classesGrid");
+      if (!grid) return;
+
+      const cards = Array.from(grid.querySelectorAll(".class-card"));
+      const chips = Array.from(document.querySelectorAll(".chip"));
+      const input = document.getElementById("classSearch");
+      const btnSearch = document.getElementById("classSearchBtn");
+      const btnClear = document.getElementById("classClearBtn");
+
+      let activeFilter = "all";
+      let query = "";
+
+      function apply() {
+        const q = query.trim().toLowerCase();
+
+        cards.forEach(card => {
+          const cat = card.getAttribute("data-cat");
+          const title = (card.getAttribute("data-title") || "").toLowerCase();
+          const matchesFilter = (activeFilter === "all") || (cat === activeFilter);
+          const matchesQuery = !q || title.includes(q);
+
+          card.style.display = (matchesFilter && matchesQuery) ? "" : "none";
+        });
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("is-active"));
+          chip.classList.add("is-active");
+          activeFilter = chip.getAttribute("data-filter");
+          apply();
+        });
+      });
+
+      btnSearch?.addEventListener("click", () => {
+        query = input?.value || "";
+        apply();
+      });
+
+      input?.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          query = input.value || "";
+          apply();
+        }
+      });
+
+      btnClear?.addEventListener("click", () => {
+        query = "";
+        if (input) input.value = "";
+        activeFilter = "all";
+        chips.forEach(c => c.classList.remove("is-active"));
+        chips.find(c => c.getAttribute("data-filter") === "all")?.classList.add("is-active");
+        apply();
+      });
+
+      apply();
+    })();
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
