@@ -89,53 +89,83 @@
 
       <div class="contact-grid">
 
-        <!-- ✅ SINGLE FORM (Formspree) -->
-        <div class="contact-card">
-          <form action="https://formspree.io/f/mnjbjgzv" method="POST">
-            <input type="hidden" name="_subject" value="New Contact Message - CIEL Professionals" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
+        <!-- Contact Form (Formspree – CLEAN & WORKING) -->
+<form
+  action="https://formspree.io/f/mnjbjgzv"
+  method="POST"
+>
+  <!-- Formspree settings -->
+  <input type="hidden" name="_subject" value="New Contact Message - CIEL Professionals" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_next" value="https://cielprofs.com/thank-you.html" />
 
-            <div class="form-row">
-              <div class="field">
-                <label class="label" for="fullName">Full Name</label>
-                <input class="input" id="fullName" name="name" type="text" placeholder="Your full name" required />
-              </div>
+  <div class="form-row">
+    <div class="field">
+      <label class="label" for="name">Full Name</label>
+      <input
+        class="input"
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Your full name"
+        required
+      />
+    </div>
 
-              <div class="field">
-                <label class="label" for="email">Email Address</label>
-                <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-            </div>
+    <div class="field">
+      <label class="label" for="email">Email Address</label>
+      <input
+        class="input"
+        id="email"
+        name="email"
+        type="email"
+        placeholder="you@example.com"
+        required
+      />
+    </div>
+  </div>
 
-            <div class="form-row">
-              <div class="field">
-                <label class="label" for="phone">Phone Number</label>
-                <input class="input" id="phone" name="phone" type="tel" placeholder="e.g. 0813 347 4986" />
-                <p class="help">Digits only (10–14 digits).</p>
-              </div>
+  <div class="form-row">
+    <div class="field">
+      <label class="label" for="phone">Phone Number</label>
+      <input
+        class="input"
+        id="phone"
+        name="phone"
+        type="tel"
+        placeholder="e.g. 0813 347 4986"
+      />
+      <p class="help">Optional</p>
+    </div>
 
-              <div class="field">
-                <label class="label" for="topic">Topic</label>
-                <select class="select" id="topic" name="topic" required>
-                  <option value="">Select a topic</option>
-                  <option value="training">Training / Courses</option>
-                  <option value="consulting">Consulting Services</option>
-                  <option value="support">Support / Technical Help</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
+    <div class="field">
+      <label class="label" for="topic">Topic</label>
+      <select class="select" id="topic" name="topic" required>
+        <option value="">Select a topic</option>
+        <option value="training">Training / Courses</option>
+        <option value="consulting">Consulting Services</option>
+        <option value="support">Support / Technical Help</option>
+        <option value="partnership">Partnership</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
 
-            <div class="field">
-              <label class="label" for="message">Message</label>
-              <textarea class="textarea" id="message" name="message" placeholder="Type your message here..." required></textarea>
-            </div>
+  <div class="field">
+    <label class="label" for="message">Message</label>
+    <textarea
+      class="textarea"
+      id="message"
+      name="message"
+      placeholder="Type your message here..."
+      required
+    ></textarea>
+  </div>
 
-            <button class="btn btn--full" type="submit">Send Message</button>
-          </form>
-        </div>
+  <button class="btn btn--full" type="submit">Send Message</button>
+</form>
+
 
         <!-- Info + Map -->
         <div class="info-card">
