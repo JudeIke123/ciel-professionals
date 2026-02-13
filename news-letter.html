@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  const API_BASE = "https://ciel-api.onrender.com";
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newsletter | CIEL Professionals</title>
@@ -112,53 +114,86 @@
   method="POST"
   class="nl-form"
 >
-  <div class="nl-form__row">
-    <input class="input" type="text" name="name" placeholder="Jude Esedebe" required />
-    <input class="input" type="email" name="email" placeholder="jesedebe@gmail.com" required />
+  <!-- Newsletter Subscription (Flask API) -->
+<form id="newsletterForm">
+  <div class="form-row">
+    <div class="field">
+      <label class="label" for="nlName">Full Name</label>
+      <input class="input" id="nlName" name="name" type="text" placeholder="Your full name" />
+    </div>
+
+    <div class="field">
+      <label class="label" for="nlEmail">Email Address</label>
+      <input class="input" id="nlEmail" name="email" type="email" placeholder="you@example.com" required />
+    </div>
   </div>
 
-  <input type="hidden" name="_subject" value="New Newsletter Subscription" />
-  <input type="hidden" name="_captcha" value="false" />
+  <div class="field">
+    <label class="label" for="interest">Interest (Optional)</label>
+    <select class="select" id="interest" name="interest">
+      <option value="">Select interest</option>
+      <option value="pmp">PMP / Project Management</option>
+      <option value="ba">Business Analysis</option>
+      <option value="data">Data Analytics</option>
+      <option value="p6">Primavera P6</option>
+      <option value="cyber">Cybersecurity</option>
+      <option value="hse">HSE</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-  <button class="btn" type="submit">Subscribe</button>
+  <button class="btn btn--full" type="submit" id="nlBtn">Subscribe</button>
+  <div class="success-box" id="nlMsg" style="margin-top:10px;"></div>
 </form>
 
-            <div class="nl-form__row">
-              <select class="input" name="interest">
-                <option value="">Interest (optional)</option>
-                <option value="Project Management">Project Management</option>
-                <option value="Business Analysis">Business Analysis</option>
-                <option value="Data & Analytics">Data & Analytics</option>
-                <option value="Technology">Technology</option>
-                <option value="Cyber & IT">Cyber & IT</option>
-                <option value="HSE">HSE</option>
-              </select>
+<script>
+  const API_BASE = "https://ciel-api.onrender.com";
 
-              <button class="btn" type="submit">Subscribe</button>
-            </div>
+  const nlForm = document.getElementById("newsletterForm");
+  const nlBtn = document.getElementById("nlBtn");
+  const nlMsg = document.getElementById("nlMsg");
 
-            <p class="nl-note muted" id="newsletterMsg" aria-live="polite"></p>
-          </form>
-        </div>
+  nlForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    nlMsg.textContent = "";
 
-        <div class="nl-subscribe__right">
-          <div class="nl-box">
-            <h3>What you’ll get</h3>
-            <ul>
-              <li>✅ Upcoming class dates</li>
-              <li>✅ Free templates & tools</li>
-              <li>✅ Study tips & mock questions</li>
-              <li>✅ Career & interview support</li>
-            </ul>
-          </div>
+    const data = {
+      name: nlForm.name.value.trim(),
+      email: nlForm.email.value.trim(),
+      interest: nlForm.interest.value
+    };
 
-          <div class="nl-box">
-            <h3>Contact</h3>
-            <p class="muted" style="margin:0">Email: MIMI@cielprof.com</p>
-            <p class="muted" style="margin:0">Phone: +234 813 347 4986</p>
-          </div>
-        </div>
-      </div>
+    nlBtn.disabled = true;
+    const old = nlBtn.textContent;
+    nlBtn.textContent = "Submitting...";
+
+    try {
+      const res = await fetch(`${API_BASE}/api/newsletter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const out = await res.json();
+
+      if (!res.ok || !out.ok) {
+        nlMsg.style.color = "crimson";
+        nlMsg.textContent = `❌ ${out.error || "Subscription failed."}`;
+      } else {
+        nlMsg.style.color = "green";
+        nlMsg.textContent = `✅ ${out.message}`;
+        nlForm.reset();
+      }
+    } catch (err) {
+      nlMsg.style.color = "crimson";
+      nlMsg.textContent = "❌ Network error. Try again.";
+    } finally {
+      nlBtn.disabled = false;
+      nlBtn.textContent = old;
+    }
+  });
+</script>
+
 
     </div>
   </section>
